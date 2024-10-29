@@ -8,7 +8,7 @@ def get_user_subscriptions():
         return None
     subscriptions = []
     request = youtube.subscriptions().list(
-        part='snippet',
+        part='snippet,contentDetails',
         mine=True,
         maxResults=50
     )

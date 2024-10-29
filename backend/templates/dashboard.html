@@ -13,6 +13,14 @@
         <li>{{ category }}: {{ count }} subscriptions</li>
         {% endfor %}
     </ul>
+
+    <h2>Your Subscriptions</h2>
+    <ul>
+        {% for sub in subscriptions %}
+        <li>{{ sub['snippet']['title'] }}</li>
+        {% endfor %}
+    </ul>
+
     <p><a href="{{ url_for('auth.logout') }}">Logout</a></p>
 </body>
 </html>
