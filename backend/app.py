@@ -1,4 +1,5 @@
 # app.py
+import os
 from flask import Flask, session, redirect, url_for
 from flask_cors import CORS
 from config import DevelopmentConfig
@@ -10,6 +11,8 @@ app = Flask(__name__)
 CORS(app, supports_credentials=True)
 app.config.from_object(DevelopmentConfig)
 app.secret_key = app.config['SECRET_KEY']
+
+os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
 # Register blueprints
 app.register_blueprint(auth_bp)
