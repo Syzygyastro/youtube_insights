@@ -1,0 +1,26 @@
+<!-- templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Analytics Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to Your Dashboard</h1>
+    <h2>Your Subscription Analysis</h2>
+    <ul>
+        {% for category, count in analysis.items() %}
+        <li>{{ category }}: {{ count }} subscriptions</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Your Subscriptions</h2>
+    <ul>
+        {% for sub in subscriptions %}
+        <li>{{ sub['snippet']['title'] }}</li>
+        {% endfor %}
+    </ul>
+
+    <p><a href="{{ url_for('auth.logout') }}">Logout</a></p>
+</body>
+</html>
