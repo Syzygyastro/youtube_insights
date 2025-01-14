@@ -1,4 +1,7 @@
-# YouTube Insights ![image](https://github.com/user-attachments/assets/ae2251e1-af97-4e8f-b119-9c0e6abd50eb)
+
+# YouTube Insights    
+  ![image](https://github.com/user-attachments/assets/a8c4d640-d90e-41bc-8621-0a2e8bf22f41)
+
 
 
 YouTube Insights is a web application that provides users with an analysis of their YouTube subscriptions, categorizing them into various content types such as Music, Gaming, News, and others. Built with Flask, the app integrates with the YouTube Data API to fetch user subscription data and offers a dashboard for visualizing the analysis.
